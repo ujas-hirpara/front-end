@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>{{note}}</h1>
+     <div class="box1" *ngFor="let product of productData">
+          <div class="childData">
+             <h4>{{product.productName}}</h4>
+             <p>{{product.Description}}</p>
+             <p><b>Price $</b>{{product.Price}}</p>
+             <p><b>Available Quantity : </b>{{product.Quantity}}</p>
+          </div>
+     </div>
+ </div>

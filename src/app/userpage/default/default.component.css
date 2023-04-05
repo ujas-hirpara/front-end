@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.box1{
+    height:150px;
+    width: 600px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    box-shadow: 5px 5px 10px rgb(142, 142, 142);
+    justify-content: space-around;
+    background-color: rgb(251, 252, 240);
+}
+
+.child{
+    height: 150px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.childData{
+    height: 150px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(94, 193, 255);
+    color: white;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>{{note}}</h1>
+     <div class="box1" *ngFor = "let cartproduct of cartData;let i = index">
+          <div class="childData">
+             <h4>{{cartproduct.productName}}</h4>
+             <p>{{cartproduct.Description}}</p>
+             <p><b>Price $</b>{{cartproduct.Price}}</p>
+          </div>
+          <div class="child">
+            <div class="increment">
+                <button class="btn btn-primary px-3 me-2" (click)="increment(i,'minuse',cartproduct.productId,box.value)">-</button>
+                <div class="form-outline">
+                  <input style="width: 45px;" id="input_{{i}}" min="0" name="quantity" value="{{cartproduct.cartQuantity}}" #box type="text" class="form-control" />
+                </div>
+                <button class="btn btn-primary px-3 ms-2" (click)="increment(i,'add',cartproduct.productId,box.value)">+</button>
+            </div>
+            <div class="add">
+              <button style="width: 70px;" class="btn btn-primary px-3 ms-2" (click)="add(cartproduct._id,box.value,i)">Add</button>
+              <button id="remove" style="width: 80px;" class="btn btn-primary ms-1" (click)="dropCart(cartproduct._id,cartproduct.productId)">Remove</button>
+            </div>
+          </div>
+          <div class="amount">
+            <b>Total payble :</b>
+            <p id="p_{{i}}">$ : {{cartproduct.payble}}</p>  
+            <b>Quantity : {{box.value}}</b>
+          </div>
+     </div>
+ </div>

@@ -1,0 +1,19 @@
+h1{
+    color: rgb(127, 202, 255);
+    position:relative;
+    top: 50%;
+    left: 30%;
+    font-size: 50px;
+    margin-top: 100px;
+    width: 800px;
+}
+/* .container-fluid{
+    width: 80vw;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100vw;
+    height: 87vh;
+} */

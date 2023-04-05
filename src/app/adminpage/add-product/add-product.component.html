@@ -1,0 +1,29 @@
+<div class="container" style="margin: auto; padding-top: 30px; width: 500px;">
+    <h1 style="margin-left: 100px;">ADD PRODUCT</h1>
+    <form id="listform" #productform = "ngForm" enctype="multipart/form-data">
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Product name</label>
+            <input type="text" ngModel class="form-control" name="productName" #name = "ngModel" required>
+        </div>
+        <span *ngIf = "name.invalid && name.touched"><b>Product name is required</b></span>
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Product Description</label>
+            <textarea ngModel  class="form-control" name="Description" #Description = "ngModel" required></textarea>
+        </div>
+        <span *ngIf = "Description.invalid && Description.touched"><b>Product Description is required</b></span>
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Price</label>
+            <input type="number" class="form-control" ngModel name="Price" #Price = "ngModel" required>
+        </div>
+        <span *ngIf = "Price.invalid && Price.touched"><b>Price is required</b></span>
+        <div  class="mb-2">
+            <label for="formGroupExampleInput" class="form-label">Available Quntity</label>
+            <input type="number" ngModel class="form-control" name="Quantity" #quntity = "ngModel" required>
+        </div>
+        <span *ngIf = "quntity.invalid && quntity.touched"><b>Quntity is required</b></span>
+        <div style="margin-left: 200px;" class="col-12">
+            <button class="btn btn-primary" id="submit" type="submit" [disabled] = "productform.invalid" (click)="addProduct(productform.value);productform.reset()">Submit</button>
+        </div>
+    </form>
+</div>
+

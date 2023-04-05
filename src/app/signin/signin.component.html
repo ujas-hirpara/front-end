@@ -1,0 +1,37 @@
+<div class="container" style="margin: auto; padding-top: 30px; width: 500px;">
+    <h1 style="margin-left: 150px;">SIGN IN</h1>
+    <form id="listform" #signinform = "ngForm" >
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Name</label>
+            <input type="text" ngModel class="form-control" name="Name" #name = "ngModel" required>
+        </div>
+        <span *ngIf = "name.invalid && name.touched"><b>Name is required</b></span>
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Email</label>
+            <input type="email" ngModel  class="form-control" name="Email" #email = "ngModel" required>
+        </div>
+        <span *ngIf = "email.invalid && email.touched"><b>Email is required</b></span>
+        <div>
+        <label for="inputStat" class="form-label">Role</label>
+        <select id="inputStat" ngModel class="form-select" name="Role" #role = "ngModel" required>
+            <option id="inputState1" selected>--select--</option>
+            <option  id="inputstate2">Admin</option>
+            <option  id="inputstate3">User</option>
+        </select>
+        <span *ngIf = "role.invalid && role.touched"><b>Role is required</b></span>
+        </div>
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Password</label>
+            <input type="password" class="form-control" ngModel name="Password" #password = "ngModel" required>
+        </div>
+        <span *ngIf = "password.invalid && password.touched"><b>Password is required</b></span>
+        <div  class="mb-2">
+            <label for="formGroupExampleInput" class="form-label">Comform Password</label>
+            <input type="password" ngModel class="form-control" name="ComformPassword" #Cpassword = "ngModel" required>
+        </div>
+        <span *ngIf = "Cpassword.invalid && Cpassword.touched"><b>Please conform the password</b></span>
+        <div style="margin-left: 200px;" class="col-12">
+            <button class="btn btn-primary" id="submit" type="submit" [disabled] = "signinform.invalid" (click)="postData(signinform.value);signinform.reset()">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 900px;
+    flex-wrap: wrap;
+
+}
+
+.box1{
+    height:190px;
+    width: 400px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    box-shadow: 5px 5px 10px rgb(142, 142, 142);
+    justify-content: center;
+    background-color: rgb(251, 252, 240);
+}
+.childData{
+    height: 190px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+};

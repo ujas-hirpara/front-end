@@ -1,0 +1,17 @@
+<div class="container" style="margin: auto; padding-top: 30px; width: 400px;">
+    <h1 style="margin-left: 120px;">LOG IN</h1>
+    <form id="listform" #loginForm = "ngForm">
+        <div>
+            <label for="formGroupExampleInput" class="form-label">Email</label>
+            <input type="email" ngModel class="form-control" id="formInput" name="Email">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Password</label>
+            <input type="password" ngModel class="form-control" id="formInput1" name="Password">
+        </div>
+        <div style="margin-left: 150px;" class="col-12">
+            <button class="btn btn-primary" id="submit" type="submit" (click)="loginform(loginForm.value)">Submit</button>
+        </div>
+    </form>
+</div>
+
