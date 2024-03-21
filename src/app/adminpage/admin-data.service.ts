@@ -10,21 +10,21 @@ export class AdminDataService {
   constructor(private http:HttpClient) { }
 
   getadminData(index:any):Observable<any>{
-    return this.http.get(`http://localhost:4000/profile/${index}`)
+    return this.http.get(`http://100.26.33.131/profile/${index}`)
   }
 
   getProductData():Observable<any>{
-    return this.http.get(`http://localhost:4000/showproduct`)
+    return this.http.get(`http://100.26.33.131/showproduct`)
   }
 
   postProduct(productData:any):Observable<any>{
-    return this.http.post(`http://localhost:4000/addproduct`,productData)
+    return this.http.post(`http://100.26.33.131/addproduct`,productData)
   }
 
   getTotalProduct(adminId:any):Observable<any>{
-    return this.http.get(`http://localhost:4000/totalProduct/${adminId}`)
+    return this.http.get(`http://100.26.33.131/totalProduct/${adminId}`)
   }
   getAdminProductData(adminId:number):Observable<any>{
-    return this.http.get(`http://localhost:4000/adminTotalProduct/${adminId}`)
+    return this.http.get(`http://100.26.33.131/adminTotalProduct/${adminId}`)
   }
 }

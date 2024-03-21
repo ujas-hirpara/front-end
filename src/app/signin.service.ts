@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class SigninService {
 
-  public url = "http://localhost:4000/userdata"
+  public url = "http://100.26.33.131/userdata"
 
   constructor(private http:HttpClient) { }
 
@@ -21,6 +21,6 @@ export class SigninService {
   }
 
   loginUser(userdata:any):Observable<any>{
-    return this.http.post("http://localhost:4000/login",userdata)
+    return this.http.post("http://100.26.33.131/login",userdata)
   }
 }

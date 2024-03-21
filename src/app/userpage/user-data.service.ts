@@ -10,33 +10,33 @@ export class UserDataService {
   constructor(private http:HttpClient) { }
 
   getData(index:any):Observable<any>{
-    return this.http.get(`http://localhost:4000/profile/${index}`)
+    return this.http.get(`http://100.26.33.131/profile/${index}`)
   }
 
   getProductData():Observable<any>{
-    return this.http.get(`http://localhost:4000/showproduct`)
+    return this.http.get(`http://100.26.33.131/showproduct`)
   }
   postCartProduct(data:any):Observable<any>{
-    return this.http.post(`http://localhost:4000/postCartProduct`,data)
+    return this.http.post(`http://100.26.33.131/postCartProduct`,data)
   }
 
   getCartProduct(index:any):Observable<any>{
-    return this.http.get(`http://localhost:4000/getCartProduct/${index}`)
+    return this.http.get(`http://100.26.33.131/getCartProduct/${index}`)
   }
 
   saveData(data:any):Observable<any>{
-    return this.http.post(`http://localhost:4000/saveData`,data)
+    return this.http.post(`http://100.26.33.131/saveData`,data)
   }
 
   dropData(_id:any,productId:number):Observable<any>{
-    return this.http.delete(`http://localhost:4000/dropData/${_id}/${productId}`)
+    return this.http.delete(`http://100.26.33.131/dropData/${_id}/${productId}`)
   }
   fetchproduct():Observable<any>{
-    return this.http.get(`http://localhost:4000/showproduct`)
+    return this.http.get(`http://100.26.33.131/showproduct`)
   }
 
   newFindProduct(productId:number):Observable<any>{
-    return this.http.get(`http://localhost:4000/findProduct/${productId}`)
+    return this.http.get(`http://100.26.33.131/findProduct/${productId}`)
   }
 
 }
